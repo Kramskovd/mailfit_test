@@ -7,7 +7,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var inject = require('gulp-inject');
 var babel = require("gulp-babel");
 var concat = require("gulp-concat");
-
+var Swiper = require('swiper');
 
 function gulp_inject(){
   var target = gulp.src('./index.html');
@@ -36,10 +36,10 @@ function scss_style(done){
   done();
 }
 function watchFiles() {
-  gulp.watch("./src/styles/scss/*", gulp.parallel(scss_style, gulp_inject));
+  gulp.watch("./src/styles/scss/*", scss_style);
   gulp.watch("./src/styles/css/*", browserReload);
   gulp.watch("./**/*.html", browserReload);
-  gulp.watch("./**/*.js", gulp.parallel(browserReload, gulp_inject));
+  gulp.watch("./**/*.js", browserReload);
 }
 
 function sync(done) {
@@ -56,6 +56,12 @@ function browserReload(done) {
   browserSync.reload();
   done();
 }
+function concatFile(done){
+  gulp.src('src/**/*.scss')
+  .pipe(concat('main.css'));
+  done();
+}
+
 function babelComp() {
  return gulp.src("src/**/*.js")
    .pipe(sourcemaps.init())
@@ -65,4 +71,4 @@ function babelComp() {
    .pipe(gulp.dest("dist"));
 }
 
-gulp.task('default', gulp.parallel(sync, watchFiles, babelComp));
+gulp.task('default', gulp.parallel(sync, watchFiles, babelComp, gulp_inject));

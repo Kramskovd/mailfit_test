@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.5"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "swiper": "^6.3.5"
   }
 }

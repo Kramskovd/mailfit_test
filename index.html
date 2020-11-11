@@ -2,15 +2,59 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <!-- inject:css -->
-<link rel="stylesheet" href="/src/styles/fonts.css">
-<link rel="stylesheet" href="/src/styles/css/main.min.css">
-<!-- endinject -->
+    <link rel="stylesheet" href="/src/styles/fonts.css">
+    <link rel="stylesheet" href="/src/styles/css/main.min.css">
+    <!-- endinject -->
+
   </head>
   <body>
     <h1>Наши направления</h1>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <div class="menu"></div>
+
+
+
+    <div class="card card_desc-close" >
+        <div class="card__wrapper-for-title">
+          <h2 class="card__title-town">Милан</h2>
+          <h2 class="card__title-country">Италия</h2>
+        </div>
+        <div class="card__description-block">
+          <div class="card__wrapper-description-block">
+            <p class="card__description">Фрайбург-им-Брайсгау – оживленный университетский город в горах Шварцвальд на юго-западе Германии, известный своим умеренным климатом и восстановленным после войны средневековым Старым городом.</p>
+            <a href="#" class="card__button">Подробнее</a>
+          </div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module">
+      import * as Swiper from './node_modules/swiper/swiper-bundle.min.js';
+
+    </script>
+    <script type="module" src="/app.js">
+
+    </script>
 <!-- inject:js -->
 <script src="/src/js/main.js"></script>
 <!-- endinject -->

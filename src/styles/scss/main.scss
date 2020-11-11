@@ -1,11 +1,148 @@
 body{
   background-color: #4F73CD;
 }
+h1,h2{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #fff
+}
 
 h1{
   font-family: 'Golos DemiBold';
   font-size: 36px;
   color: #ffffff;
   line-height: 53px;
-  margin: 0
+  margin: 0;
+  position: relative;
+}
+.swiper-slide{
+  display: inline-block;
+}
+
+.card_desc-close{
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+.card_desc-open{
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+  @media all and (min-width: 1440px) {
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+.card__description-block{
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+.card{
+  display: inline-block;
+  background: linear-gradient(0deg, rgba(18, 24, 42, 0.5) 0%, rgba(18, 24, 42, 0) 72.2%), url('/src/assets/milan.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40%;
+  mix-blend-mode: normal;
+  position: relative;
+  color: #fff;
+  width: 158px;
+  height: 230px;
+  cursor: pointer;
+
+  .card__wrapper-for-title{
+
+    position: absolute;
+    left: 11px;
+    top: 178px;
+    @media all and (min-width: 768px) and (max-width: 1439px){
+      left: 14.33px;
+      top: 256px;
+    }
+    @media all and (min-width: 1440px) {
+      left: 12px;
+      top: 193px
+    }
+
+    .card__title-town{
+      font-family: 'Golos DemiBold';
+      font-size: 16px;
+      line-height: 19,2px;
+    }
+    .card__title-country{
+      font-family: 'Golos Regular';
+      font-size: 16px;
+      line-height: 19,2px;
+    }
+  }
+  @media all and (min-width: 1440px) {
+    width: 170px;
+    height: 250px;
+    box-shadow: none;
+  }
+  @media all and (min-width: 768px) and (max-width: 1439px){
+    width: 216px;
+    height: 317px;
+    margin: 10px 6px 9px 6px;
+  }
+  @media all and (min-width: 375px) and (max-width: 767px){
+    width: 158px;
+    height: 230px;
+  }
+  .card__description-block{
+    position: absolute;
+    background-color: #254595;
+    height: inherit;
+    left: 100%;
+    display: none;
+    border-radius: 0 8px 8px 0;
+    min-width: 400px;
+    z-index: 1;
+    cursor: default;
+    .card__wrapper-description-block{
+      margin: 25px 26px 0 21px;
+      box-shadow: none;
+    }
+    .card__description{
+      font-size: 16px;
+      font-family: 'Golos Regular';
+      line-height: 140%;
+      color: #fff;
+      box-shadow: none;
+      margin: 0;
+    }
+    .card__button{
+      display: inline-block;
+      background-color: inherit;
+      font-family: 'Golos Bold';
+      line-height: 24px;
+      padding: 13px 21px;
+      font-size: 16px;
+      text-align: center;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: none;
+      margin-top: 14px;
+    }
+    .card__button:hover{
+        background-color: #0047FE;
+        border: 1px solid #0047FE;
+    }
+  }
+}
+
+.card:nth-child(4n){
+
+  @media all and (min-width: 1440px) {
+    .card__description-block{
+      left: -200%;
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 1439px){
+
+  }
+  @media all and (min-width: 375px) and (max-width: 767px){
+
+  }
 }
